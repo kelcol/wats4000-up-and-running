@@ -34,7 +34,7 @@ requirements.
 - [x] Clone this repository to your working development environment.
 - [x] Install dependencies by running `npm install` in the root of the repository.
 - [x] Test the site by running `npm run dev` to start the development server.
-- [ ] Read through the site code and note the following:
+- [x] Read through the site code and note the following:
     * What directories do you see? How do you interpret their names?
     * Where is the Vue app defined? (Which file?)
     * What is listed in `package.json`?
