@@ -39,15 +39,6 @@ The last file to mention is `.editorconfig` which looks to be a helpful file for
     * What do you see in the console output? How do you interpret that information?    
     * When you're finished you can exit the build report by typing ctrl-c to quit.   
 
-
-Look at the directories in your project again and notice that there is a new one called dist.
-
-    * Explore the dist directory. What do you see?    
-    * Do you see the filenames of the static files? What seems odd about those filenames?   
-    * Do you see the contents of your JS and CSS files? What has happened to those contents?   
-    * Describe (in words or with a flowchart/diagram) what happens when the npm run build command is executed to the best of your ability.   
-
-
 `npm run build --report` starts the Webpack Bundle Analyzer which generates and analyzes a test build of the app and then produces a report. The test build is not served up via HTTP but based on what was printed to the console, I think the build process is similiar to a normal production build in all other ways. One thing I'm not sure about is whether the build is perpetuated after analysis takes place or if it is automatically destroyed. 
 
 The report is displayed as a treemap with some labels that on first look resemble the names of files I came across in the previous step along with some I don't recognize. On closer examination, nested blocks hierarchically represent different folders and files produced during the test build process. Hovering over each block displays three different sizes (stat, parsed, and gzipped) and the target's path. 
@@ -57,3 +48,15 @@ On the right side of the treemap are folders and files exported by webpack into 
 I think the purpose of separating vendor vs. app files out is to allow the report to distinguish between the total size of the application when installed, with dependencies included; the size of the app when shipped without dependencies, the small blue part to the right; and the size taken up in the total application by the dependencies, the larger tan part to the left. For this particular app, the size of dependencies was many times larger than the core app itself.
 
 Seeing the finished test build visualized this way in the report helped me better better understand how the build process works through finding out what makes it into the final build. A conclusion I've come to is that requiring dependencies in your project comes at a cost.
+
+---
+
+Look at the directories in your project again and notice that there is a new one called dist.
+
+    * Explore the dist directory. What do you see?    
+    * Do you see the filenames of the static files? What seems odd about those filenames?   
+    * Do you see the contents of your JS and CSS files? What has happened to those contents?   
+    * Describe (in words or with a flowchart/diagram) what happens when the npm run build command is executed to the best of your ability.   
+    
+ 
+Generating the test build created a new folder called `dist` in the project directory. There are several `.js` and `.map` files which include hashes specific to the test build and are familiar from what was printed to the console after the run command. The prefixes for these files are app, vendor, and manifest. On opening these files I notice they've been uglified, I'm guessing for the purposes of minimizing filesize. I don't recognize much of what's in these files but assume its a production-build of the app bundled for production!
