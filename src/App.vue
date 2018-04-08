@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <h1>Markdown Editor</h1>
+    <custom></custom>
     <editor></editor>
+    
   </div>
 </template>
 
 <script>
 import Editor from './components/Editor'
+import Custom from './components/Custom'
 
 export default {
   name: 'app',
   components: {
-    Editor
-  }
+    Editor, Custom
+  },
+
 }
 </script>
 
