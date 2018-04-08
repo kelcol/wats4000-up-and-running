@@ -1,8 +1,11 @@
 <template>
   <div class="editor">
+
+    <h1 :value="input" @input="update"></h1>
     <textarea :value="input" @input="update"></textarea>
     <div v-html="compiledMarkdown"></div>
-  </div>
+    </div>
+
 </template>
 
 <script>
