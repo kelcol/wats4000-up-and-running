@@ -51,7 +51,7 @@ Seeing the finished test build visualized this way in the report helped me bette
 
 ---
 
-Look at the directories in your project again and notice that there is a new one called dist.
+**Look at the directories in your project again and notice that there is a new one called dist.**
 
     * Explore the dist directory. What do you see?    
     * Do you see the filenames of the static files? What seems odd about those filenames?   
