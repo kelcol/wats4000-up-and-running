@@ -39,7 +39,7 @@ The last file to mention is `.editorconfig` which looks to be a helpful file for
     * What do you see in the console output? How do you interpret that information?    
     * When you're finished you can exit the build report by typing ctrl-c to quit.   
 
-`npm run build --report` starts the Webpack Bundle Analyzer which generates and analyzes a test build of the app and then produces a report. The test build is not served up via HTTP but based on what was printed to the console, I think the build process is similiar to a normal production build in all other ways. One thing I'm not sure about is whether the build is perpetuated after analysis takes place or if it is automatically destroyed. 
+`npm run build --report` starts the Webpack Bundle Analyzer which generates and analyzes a test build of the app and then produces a report. The test build is not served up via HTTP but based on what was printed to the console, I think the build process is similiar to a normal production build in all other ways. 
 
 The report is displayed as a treemap with some labels that on first look resemble the names of files I came across in the previous step along with some I don't recognize. On closer examination, nested blocks hierarchically represent different folders and files produced during the test build process. Hovering over each block displays three different sizes (stat, parsed, and gzipped) and the target's path. 
 
