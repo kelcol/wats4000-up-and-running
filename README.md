@@ -39,14 +39,14 @@ requirements.
     * Where is the Vue app defined? (Which file?)
     * What is listed in `package.json`?
     * What do you see in the `build` and `config` directories?
-- [ ] Press `ctrl-c` in the terminal to exit the development server.
-- [ ] Run `npm run build --report` and take a look at both the webpage that comes up and the output in the console. Consider the following questions:
+- [x] Press `ctrl-c` in the terminal to exit the development server.
+- [x] Run `npm run build --report` and take a look at both the webpage that comes up and the output in the console. Consider the following questions:
     * What are you looking at in the "build report" that pops up in the web browser?
     * Can you tell which files are the largest in the project?
     * Does the custom code of the app (look for the blue box) make up the largest of the filesize? If not, what creates the most bulk in terms of file downloads?
     * What do you see in the console output? How do you interpret that information?
     * When you're finished you can exit the build report by typing `ctrl-c` to quit.
-- [ ] Look at the directories in your project again and notice that there is a new one called `dist`.
+- [x] Look at the directories in your project again and notice that there is a new one called `dist`.
     * Explore the `dist` directory. What do you see?
     * Do you see the filenames of the static files? What seems odd about those filenames?
     * Do you see the contents of your JS and CSS files? What has happened to those contents?
